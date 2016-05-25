@@ -2,7 +2,7 @@
 This is a repository to store firmwares for the Arduino platform to run OpenPLC. The firmware must be uploaded using the Arduino IDE. After uploading the firmware, connect the arduino to the USB port and run the OpenPLC_v2.
 
 Arduino UNO
-/******************PINOUT CONFIGURATION*******************
+******************PINOUT CONFIGURATION*******************
 
 Digital In: 2, 3, 4, 5, 6           (%IX0.0 - %IX0.4)
 
@@ -12,10 +12,10 @@ Analog In: A0, A1, A2, A3, A4, A5   (%IW0.0 - %IW0.5)
 
 Analog Out: 9, 10, 11               (%QW0.0 - %QW0.2)
 
-**********************************************************/
+**********************************************************
 
 Arduino MEGA
-/************************PINOUT CONFIGURATION*************************
+************************PINOUT CONFIGURATION*************************
 
 Digital In: 22, 24, 26, 28, 30, 32, 34, 36,       (%IX0.0 - %IX0.7)
             38, 40, 42, 44, 46, 48, 50, 52,       (%IX1.0 - %IX1.7)
@@ -30,4 +30,4 @@ Analog In: A0, A1, A2, A3, A4, A5, A6, A7         (%IW0.0 - %IW0.7)
 Analog Out: 2, 3, 4, 5, 6, 7, 8, 9,               (%QW0.0 - %QW0.7)
             10, 11, 12, 13                        (%QW0.8 - %QW0.11)
 			
-*********************************************************************/
+*********************************************************************
