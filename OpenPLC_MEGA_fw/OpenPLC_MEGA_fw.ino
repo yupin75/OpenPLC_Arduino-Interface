@@ -202,13 +202,24 @@ void loop()
 	
 	if (packetReceived)
 	{
-		packetReceived = false;
+		if (rcvPacketSize == sizeof(struct OPLC_output))
+		{
+			packetReceived = false;
+			
+			struct OPLC_output *dataPointer;
+			dataPointer = &output_data;
+			memcpy(dataPointer, incommingBuffer, sizeof(struct OPLC_output));
+			
+			updateOutputs();
+			sendPacket();
+		}
 		
-		struct OPLC_output *dataPointer;
-		dataPointer = &output_data;
-		memcpy(dataPointer, incommingBuffer, sizeof(struct OPLC_output));
-		
-		updateOutputs();
-		sendPacket();
+		else
+		{
+			//discard packet - incorrect data
+			packetReceived = false;
+			rcvPacketSize = 0;
+			sendPacket();
+		}
 	}
 }
